@@ -1,4 +1,9 @@
 <p id="notice"><%= notice %></p>
 
  <h3>Welcome <%=link_to @user.name,users_path %></h3>
+ <div class='row'>
+ 	<div class='small-4 coulums'>
+ 		<p>Create your own article <%=link_to 'Create' ,new_post_path %>
+ 	</div>
+ </div>
 <%= link_to 'Update your infomation', edit_user_path(@user) %> 

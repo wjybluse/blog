@@ -1,0 +1,5 @@
+<% if current_user %>
+<h1>Welcome <% current_user.name %></h1>
+<% else %>
+<%=link_to "Login",login_url%>
+<%=link_to 'SignUp',user_new_url %>

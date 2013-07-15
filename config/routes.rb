@@ -1,4 +1,6 @@
 Blog::Application.routes.draw do
+  resources :posts
+
   #get "auth/login"
   get "login"=>"auth#login" 
   post "login"=>"auth#auth_user"
