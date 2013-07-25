@@ -14,7 +14,7 @@ development:
   database: wan_blog
   pool: 5
   username: wan
-  password: wan1234
+  password: ******
   host: localhost
 
 
