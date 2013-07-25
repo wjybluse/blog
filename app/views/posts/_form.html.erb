@@ -11,23 +11,19 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="row">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </div>
-  <div class="field">
-    <%= f.label :author %><br>
-    <%= f.text_field :author %>
-  </div>
-  <div class="field">
-    <%= f.label :d_type %><br>
+  <div class="row">
+    <%= f.label :type %><br>
     <%= f.text_field :d_type %>
   </div>
-  <div class="field">
+  <div class="row">
     <%= f.label :body %><br>
-    <%= f.text_field :body %>
+    <%= f.text_area :body %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit vvalue: 'Create Article',class: 'button'%>
   </div>
 <% end %>

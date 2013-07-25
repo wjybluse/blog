@@ -1,5 +1,16 @@
 <% if current_user %>
 <h1>Welcome <%=current_user.name %> </h1>
+<% show_user_posts.each do |post| %>
+<div class="row">
+	<strong><%=post.title %></strong>
+	<p><%=post.author %></p>
+	<p><%=post.body %></p>
+	<p><%=post.d_type %></p>
+</div>
+<% end %>
+<div class="row">
+	<strong>You can create new blog <%=link_to  "Create" ,new_post_path %></strong>
+</div>
 <% else %>
 <div class='row'>
 	<div class='small-6  columns'>You can choose <%=link_to 'Log in' ,login_path %></div>
