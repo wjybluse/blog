@@ -1,13 +1,19 @@
+<div class="row">
+<div class="large-9 columns"> 
 <% if current_user %>
 <h1>Welcome <%=current_user.name %> </h1>
 <% show_user_posts.each do |post| %>
-<div class="row">
-	<strong><%=post.title %></strong>
+<div class="panel">
+	<div class="title_panel">
+	<h3><%=post.title %></h3>
+	<div>
 	<p><%=post.author %></p>
 	<p><%=post.body %></p>
 	<p><%=post.d_type %></p>
 </div>
 <% end %>
+</div>
+<div class="large-3 columns">
 <div class="row">
 	<strong>You can create new blog <%=link_to  "Create" ,new_post_path %></strong>
 </div>
@@ -17,3 +23,5 @@
 	<div class='small-6  columns'>You can choose <%= link_to 'Sign Up', new_user_path %></div.
 </div>
 <% end %>
+</div>
+</div>
